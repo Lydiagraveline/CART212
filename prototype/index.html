@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      width="device-width,"
+      initial-scale="1.0,"
+      maximum-scale="1.0,"
+      user-scalable="0"
+    />
+
+    <title>Prototype</title>
+
+    <!-- CSS stylesheet(s) -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <!-- Library script(s) go here -->
+  </head>
+
+  <body>
+    <!-- The video -->
+    <video id="video" width="800" controls>
+      <source src="assets/video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- The buttons -->
+    <button id ="startbtn" onclick="start()">Start</button>
+    <div id="buttonBox" class="buttonBox">
+      <button id="option1" onclick="play()" > Option 1</button>
+      <button id="option2" onclick="setCurTime(6)"> Option 2 </button>
+    </div>
+
+
+    <!-- My script(s) -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
