@@ -5,16 +5,45 @@ By default that's nothing.
 
 **********************************************/
 
-button {
-  /* display: none; */
+body {
+  background-color: black;
+  padding: 0;
+  margin: 0;
+  display: grid; /* Set up the grid and justify/align to center */
+  justify-content: center;
+  align-content: center;
+  height: 100vh; /* Body is the height of the viewport */
+  overflow: hidden; /* Hide anything that goes off the window size */
 }
 
 .buttonBox {
-  display: none;
-  float: left;
+  visibility: hidden;
+  display: block;
   text-align: center;
-  width: 120px;
-  border: 1px solid gray;
-  margin: 4px;
-  padding: 6px;
+  margin: 25px auto;
+}
+
+/* CSS */
+button {
+  background-color: black;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: 	#D3D3D3;
+  cursor: pointer;
+  border: 1px solid;
+  border-radius: 3px;
+  padding: 20px 50px;
+  margin-left: 30px;
+  margin-right: 30px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:active {
+  top: 5px;
+  left: 5px;
 }

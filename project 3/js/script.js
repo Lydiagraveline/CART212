@@ -27,7 +27,7 @@ vid.addEventListener("timeupdate", function () {
   // pause the video if a decision is being made
   if (deciding === "true"){
     this.pause();
-    btn.style.display = "block"; //display the buttons
+    btn.style.visibility = "visible"; //display the buttons
   }
   // check whether we have passed 5 seconds,
   // current time is given in seconds
@@ -40,6 +40,6 @@ vid.addEventListener("timeupdate", function () {
 // Play the video
 function play(){
   deciding = "false"
-  btn.style.display = "none";
+  btn.style.visibility = "hidden";
   vid.play();
 }
