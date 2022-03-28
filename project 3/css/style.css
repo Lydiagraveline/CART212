@@ -16,6 +16,10 @@ body {
   overflow: hidden; /* Hide anything that goes off the window size */
 }
 
+video {
+  display: none;
+}
+
 .buttonBox {
   visibility: hidden;
   display: block;

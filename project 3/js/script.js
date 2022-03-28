@@ -12,9 +12,17 @@ author, and this description to match your project!
 
 let vid = document.getElementById("video");
 let btn = document.getElementById("buttonBox");
+let option1 = document.getElementById("option1");
+let option2 = document.getElementById("option2");
 
 // true while player is given a decision prompt
 let deciding = "false"
+
+function start(){
+  vid.style.display = "block";
+  document.getElementById("startbtn").style.display = "none";
+  vid.play();
+}
 
 // Go to video timestamp indicated by a button
 function setCurTime(timeValue) {
@@ -29,10 +37,15 @@ vid.addEventListener("timeupdate", function () {
     this.pause();
     btn.style.visibility = "visible"; //display the buttons
   }
-  // check whether we have passed 5 seconds,
-  // current time is given in seconds
-  if (this.currentTime >= 5 && this.currentTime <= 5.5 ) {
-    //display the buttons
+
+  if (this.currentTime >= 2 && this.currentTime <= 2.3 ) {
+    option1.setAttribute('onclick','play()')
+    option2.setAttribute('onclick','setCurTime(8)')
+    deciding = "true"
+  }
+  if (this.currentTime >= 16) {
+    option1.setAttribute('onclick','setCurTime(0)')
+    option2.setAttribute('onclick','setCurTime(8)')
     deciding = "true"
   }
 });
