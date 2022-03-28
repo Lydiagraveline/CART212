@@ -16,8 +16,12 @@ body {
   overflow: hidden; /* Hide anything that goes off the window size */
 }
 
-video {
+.vidBox {
   display: none;
+  color: 	#D3D3D3;
+  border: 2px solid;
+  border-radius: 3px;
+  padding: 5px;
 }
 
 .buttonBox {
@@ -36,7 +40,7 @@ button {
   text-transform: uppercase;
   color: 	#D3D3D3;
   cursor: pointer;
-  border: 1px solid;
+  border: 2px solid;
   border-radius: 3px;
   padding: 20px 50px;
   margin-left: 30px;

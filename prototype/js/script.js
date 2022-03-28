@@ -19,7 +19,7 @@ let option2 = document.getElementById("option2");
 let deciding = "false"
 
 function start(){
-  vid.style.display = "block";
+  document.getElementById("vidBox").style.display = "block";
   document.getElementById("startbtn").style.display = "none";
   vid.play();
 }
