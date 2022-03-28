@@ -20,19 +20,17 @@
 
   <body>
     <!-- The video -->
-    <video id="video" src="assets/video.mp4" type="video/mp4" width="800" controls>
-      <!-- <source src="assets/video.mp4" type="video/mp4">
-      Your browser does not support the video tag. -->
+    <video id="video" width="800" controls>
+      <source src="assets/video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
     </video>
 
     <!-- The buttons -->
-    <div><button onclick="setCurTime(0)" type="button"> Go to 0 Sec</button></div>
-    <div><button onclick="setCurTime(5)" type="button">Go to 5 Sec</button></div>
-    <div><button onclick="setCurTime(10)" type="button">Go to 10 Sec</button></div>
+    <div id="buttonBox" class="buttonBox">
+      <button onclick="setCurTime(0)">Start Over</button>
+      <button onclick="play()"> Continue </button>
+    </div>
 
-
-    <div><button onclick="setCurTime(0)" type="button" display= "hidden"> Go back </button></div>
-    <div><button onclick="play()" type="button"> Continue </button></div>
 
     <!-- My script(s) -->
     <script src="js/script.js"></script>

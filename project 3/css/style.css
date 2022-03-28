@@ -4,3 +4,17 @@ Here is a description of any special CSS used.
 By default that's nothing.
 
 **********************************************/
+
+button {
+  /* display: none; */
+}
+
+.buttonBox {
+  display: none;
+  float: left;
+  text-align: center;
+  width: 120px;
+  border: 1px solid gray;
+  margin: 4px;
+  padding: 6px;
+}

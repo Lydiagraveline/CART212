@@ -11,24 +11,35 @@ author, and this description to match your project!
 // Code goes here
 
 let vid = document.getElementById("video");
-let btn = document.getElementById("button");
+let btn = document.getElementById("buttonBox");
+
+// true while player is given a decision prompt
+let deciding = "false"
 
 // Go to video timestamp indicated by a button
 function setCurTime(timeValue) {
   vid.currentTime = timeValue;
-  vid.play();
+  play();
 }
 
 // listen on the event
 vid.addEventListener("timeupdate", function () {
+  // pause the video if a decision is being made
+  if (deciding === "true"){
+    this.pause();
+    btn.style.display = "block"; //display the buttons
+  }
   // check whether we have passed 5 seconds,
   // current time is given in seconds
-  if (this.currentTime >= 5 && !this.currentTime <= 5) {
-    // pause the playback
-    this.pause();
+  if (this.currentTime >= 5 && this.currentTime <= 5.5 ) {
+    //display the buttons
+    deciding = "true"
   }
 });
 
+// Play the video
 function play(){
+  deciding = "false"
+  btn.style.display = "none";
   vid.play();
 }
