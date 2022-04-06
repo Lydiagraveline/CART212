@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" /> 
+    <meta charset="utf-8" />
     <meta
       name="viewport"
       width="device-width,"
@@ -20,10 +20,12 @@
 
   <body>
     <!-- The video -->
-    <video id="video" width="800" controls>
+    <div id = "vidBox" class = "vidBox">
+    <video id="video" width="800" playsinline>
       <source src="assets/video.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
+  </div>
 
     <!-- The buttons -->
     <button id ="startbtn" onclick="start()">Start</button>
